@@ -1,0 +1,15 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1777937781
+::res://models/::1777937585
+window.blend::PackedScene::8489632076418193814::1777898094::1777937584::1::::<><><>0<>0<>7c5d756fabb29682ef3b454e1058155d<>res://.godot/imported/window.blend-81f21ba3fc89bcac27686ef107391c73.scn::
+woodwall.blend::PackedScene::6842948511986313122::1777929741::1777937585::1::::<><><>0<>0<>62a5fd8ef6f7cbce9419cc8f24564b4d<>res://.godot/imported/woodwall.blend-7e5ec3430771d2f18936b3e94140d28f.scn::
+::res://models/textures/::1777937590
+wood.webp::CompressedTexture2D::5436141654615037234::1777937584::1777937590::1::::<><><>0<>0<>7488c84153cfc24d2b7e98c412871797<>res://.godot/imported/wood.webp-800b0d2ea4dddc8f821f99450e0e598b.ctex::
+::res://scenes/::1777937640
+great_hall.tscn::PackedScene::1267390325400477673::1777937640::0::1::::<><><>0<>0<><>::uid://dnwle8l84ooel::::res://textures/stonefloor.png<>uid://ccs76ov654x1k::::res://textures/woodstairs.jpg<>uid://sukreuwfar88::::res://textures/stonewall.webp<>uid://ds7o8867kamlq::::res://models/window.blend<>uid://c4q1mky5qerhq::::res://models/woodwall.blend
+::res://textures/::1777937641
+square_wooden_old_wall_panels_54_04_diffuse.webp::CompressedTexture2D::5933055129355782935::1777672673::1777937641::1::::<><><>0<>0<>a86054ceec5472085e81a01e625c5554<>res://.godot/imported/square_wooden_old_wall_panels_54_04_diffuse.webp-0f5326b762e4df6e855f0224d542e909.s3tc.ctex::
+stonefloor.png::CompressedTexture2D::8117810110861182571::1777661411::1777937641::1::::<><><>0<>0<>9fa6d9d4e220c307d988adf89f29661f<>res://.godot/imported/stonefloor.png-33e081fd3b80ff852a141f599c6932d1.s3tc.ctex::
+stonewall.webp::CompressedTexture2D::1305324510985597015::1777672279::1777937641::1::::<><><>0<>0<>79dd82ff2cbb0754baac092c235861e5<>res://.godot/imported/stonewall.webp-27d1253c21a5b1868061a736d7edda3a.s3tc.ctex::
+wood.webp::CompressedTexture2D::4827807164422422264::1777912126::1777937579::1::::<><><>0<>0<>d841033ea09ddb96c0f4044eef49d73b<>res://.godot/imported/wood.webp-c99ba47576122261e469293d56bf9a76.s3tc.ctex::
+woodstairs.jpg::CompressedTexture2D::4952376926832471746::1777669091::1777937641::1::::<><><>0<>0<>982e11af20bf6604cbd2233cb3a29255<>res://.godot/imported/woodstairs.jpg-33040c2039996ac6021506c1dfe17c5b.s3tc.ctex::

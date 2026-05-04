@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://sb6y66e3kl02"]
+
+[ext_resource type="Texture2D" uid="uid://dnwle8l84ooel" path="res://textures/stonefloor.png" id="1_wxa6g"]
+[ext_resource type="Texture2D" uid="uid://ccs76ov654x1k" path="res://textures/woodstairs.jpg" id="2_jtf6l"]
+[ext_resource type="Texture2D" uid="uid://sukreuwfar88" path="res://textures/stonewall.webp" id="3_e27m1"]
+[ext_resource type="PackedScene" uid="uid://ds7o8867kamlq" path="res://models/window.blend" id="4_xpdmu"]
+[ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="5_0o1in"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gshjv"]
+size = Vector3(55, 0, 15)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ryejj"]
+size = Vector2(55, 15)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3vo2"]
+albedo_texture = ExtResource("1_wxa6g")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_itirh"]
+size = Vector3(0.5, 0.4, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6dhdb"]
+size = Vector3(0.5, 0.4, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3qv5"]
+albedo_texture = ExtResource("2_jtf6l")
+uv1_scale = Vector3(2, 1, 1)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jgm3x"]
+size = Vector3(0.5, 0.2, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xm82"]
+size = Vector3(0.5, 0.2, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tp3pb"]
+albedo_texture = ExtResource("2_jtf6l")
+uv1_scale = Vector3(2, 1, 1)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mr34u"]
+size = Vector3(3, 0.6, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mf4dt"]
+size = Vector3(3, 0.6, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtcu0"]
+albedo_texture = ExtResource("2_jtf6l")
+uv1_scale = Vector3(2, 1, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwbns"]
+albedo_texture = ExtResource("3_e27m1")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0rn8"]
+albedo_texture = ExtResource("3_e27m1")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4485"]
+albedo_texture = ExtResource("3_e27m1")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tp47e"]
+albedo_texture = ExtResource("3_e27m1")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h48ho"]
+albedo_texture = ExtResource("3_e27m1")
+
+[node name="GreatHall" type="Node3D" unique_id=2112016567]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=2098762370]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=2097866154]
+shape = SubResource("BoxShape3D_gshjv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1007614350]
+mesh = SubResource("QuadMesh_ryejj")
+surface_material_override/0 = SubResource("StandardMaterial3D_g3vo2")
+
+[node name="TeachersArea" type="StaticBody3D" parent="." unique_id=488117376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.801193, 0.3162799, 0)
+
+[node name="Stairs" type="StaticBody3D" parent="TeachersArea" unique_id=1898481577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06170845, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TeachersArea/Stairs" unique_id=1279312428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07094383, 0, 0)
+shape = SubResource("BoxShape3D_itirh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TeachersArea/Stairs" unique_id=1248074676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6384249, -0.13947225, 0)
+mesh = SubResource("BoxMesh_6dhdb")
+surface_material_override/0 = SubResource("StandardMaterial3D_t3qv5")
+
+[node name="Stairs2" type="StaticBody3D" parent="TeachersArea" unique_id=2134890590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.201353, -0.3162799, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TeachersArea/Stairs2" unique_id=1782176467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2503223, 4.8795853, 7.0510674)
+shape = SubResource("BoxShape3D_jgm3x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TeachersArea/Stairs2" unique_id=1633482687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2300692, 0.110277176, 0)
+mesh = SubResource("BoxMesh_0xm82")
+surface_material_override/0 = SubResource("StandardMaterial3D_tp3pb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TeachersArea" unique_id=1847389431]
+shape = SubResource("BoxShape3D_mr34u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TeachersArea" unique_id=1756021524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17427254, 0, 0)
+mesh = SubResource("BoxMesh_mf4dt")
+surface_material_override/0 = SubResource("StandardMaterial3D_wtcu0")
+
+[node name="LeftWall" type="StaticBody3D" parent="." unique_id=826599147]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="LeftWall" unique_id=1499393997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.88625, 5.0852137, 6.5569477)
+size = Vector3(5.4101257, 10.144653, 1.0898743)
+material = SubResource("StandardMaterial3D_gwbns")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="LeftWall/CSGBox3D" unique_id=385983515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5621138, -1.5146356, 0)
+operation = 2
+
+[node name="window" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=231630726 instance=ExtResource("4_xpdmu")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.5442238, 1.7288394, 0.48308277)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=1953186891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5802498, 1.7401528, 0)
+radius = 1.0499701
+radial_segments = 6
+rings = 3
+material = SubResource("StandardMaterial3D_a0rn8")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=659845310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58358, 0.16206574, 0.11043644)
+size = Vector3(1.6296158, 4.1205926, 5.571127)
+material = SubResource("StandardMaterial3D_q4485")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=681795577]
+transform = Transform3D(0.9999953, 0.0023531155, 0.0019744984, 0, 0.6427876, -0.7660444, -0.0030717745, 0.76604074, 0.64278454, -0.5805092, -1.8672125, -0.32194567)
+size = Vector3(1.6151266, 4.7596436, 1.0805664)
+material = SubResource("StandardMaterial3D_tp47e")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=1229834866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58719254, -3.0325408, -0.66478395)
+size = Vector3(1.6320801, 1.234375, 1.0761719)
+material = SubResource("StandardMaterial3D_h48ho")
+
+[node name="woodwall" parent="." unique_id=1535321098 instance=ExtResource("5_0o1in")]
+transform = Transform3D(1, 8.351872e-23, -3.212633e-30, 0, -4.371139e-08, -0.88, -8.351872e-23, 1, -3.8466023e-08, -22.158, 1.3531431, 5.919396)
