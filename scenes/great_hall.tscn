@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://sb6y66e3kl02"]
 
+[ext_resource type="Script" uid="uid://cv8yk0bekrsc0" path="res://scenes/great_hall.gd" id="1_e27m1"]
 [ext_resource type="Texture2D" uid="uid://dnwle8l84ooel" path="res://textures/stonefloor.png" id="1_wxa6g"]
 [ext_resource type="Texture2D" uid="uid://ccs76ov654x1k" path="res://textures/woodstairs.jpg" id="2_jtf6l"]
 [ext_resource type="Texture2D" uid="uid://sukreuwfar88" path="res://textures/stonewall.webp" id="3_e27m1"]
+[ext_resource type="PackedScene" uid="uid://bxuy847gyw3j5" path="res://scenes/left_wall_block.tscn" id="4_0o1in"]
 [ext_resource type="PackedScene" uid="uid://ds7o8867kamlq" path="res://models/window.blend" id="4_xpdmu"]
 [ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="5_0o1in"]
+[ext_resource type="PackedScene" uid="uid://cf81ftjr0qa14" path="res://models/statue.blend" id="6_e27m1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gshjv"]
 size = Vector3(55, 0, 15)
@@ -21,7 +24,7 @@ uv1_triplanar = true
 size = Vector3(0.5, 0.4, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6dhdb"]
-size = Vector3(0.5, 0.4, 12)
+size = Vector3(0.5, 0.4, 14)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3qv5"]
 albedo_texture = ExtResource("2_jtf6l")
@@ -32,7 +35,7 @@ uv1_triplanar = true
 size = Vector3(0.5, 0.2, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_0xm82"]
-size = Vector3(0.5, 0.2, 12)
+size = Vector3(0.5, 0.2, 14)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tp3pb"]
 albedo_texture = ExtResource("2_jtf6l")
@@ -43,7 +46,7 @@ uv1_triplanar = true
 size = Vector3(3, 0.6, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mf4dt"]
-size = Vector3(3, 0.6, 12)
+size = Vector3(3, 0.6, 14)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtcu0"]
 albedo_texture = ExtResource("2_jtf6l")
@@ -69,7 +72,22 @@ uv1_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h48ho"]
 albedo_texture = ExtResource("3_e27m1")
 
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_xpdmu"]
+rayleigh_color = Color(1, 0.8117647, 0.6901961, 1)
+mie_color = Color(1, 0.5686275, 0.23137255, 1)
+turbidity = 3.0
+ground_color = Color(0.07058824, 0.08627451, 0.10980392, 1)
+
+[sub_resource type="Sky" id="Sky_0o1in"]
+sky_material = SubResource("PhysicalSkyMaterial_xpdmu")
+
+[sub_resource type="Environment" id="Environment_nsdvb"]
+background_mode = 2
+sky = SubResource("Sky_0o1in")
+
 [node name="GreatHall" type="Node3D" unique_id=2112016567]
+script = ExtResource("1_e27m1")
+box_scene = ExtResource("4_0o1in")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=2098762370]
 
@@ -115,10 +133,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17427254, 0, 0)
 mesh = SubResource("BoxMesh_mf4dt")
 surface_material_override/0 = SubResource("StandardMaterial3D_wtcu0")
 
+[node name="LeftWallBlock" parent="." unique_id=385770501 instance=ExtResource("4_0o1in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008657455, 0, 0)
+
 [node name="LeftWall" type="StaticBody3D" parent="." unique_id=826599147]
+visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="LeftWall" unique_id=1499393997]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.88625, 5.0852137, 6.5569477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.88625, 5.0852137, 6.9531384)
 size = Vector3(5.4101257, 10.144653, 1.0898743)
 material = SubResource("StandardMaterial3D_gwbns")
 
@@ -151,5 +173,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58719254, -3.0325408, -0.6
 size = Vector3(1.6320801, 1.234375, 1.0761719)
 material = SubResource("StandardMaterial3D_h48ho")
 
-[node name="woodwall" parent="." unique_id=1535321098 instance=ExtResource("5_0o1in")]
-transform = Transform3D(1, 8.351872e-23, -3.212633e-30, 0, -4.371139e-08, -0.88, -8.351872e-23, 1, -3.8466023e-08, -22.158, 1.3531431, 5.919396)
+[node name="woodwall" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=1535321098 instance=ExtResource("5_0o1in")]
+transform = Transform3D(1, 8.351872e-23, -3.212633e-30, 0, -4.371139e-08, -0.88, -8.351872e-23, 1, -3.8466023e-08, -2.8338661, -2.217435, -0.5878639)
+
+[node name="dragonstatue" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=1068132857 instance=ExtResource("6_e27m1")]
+transform = Transform3D(-6.367444e-09, -1.5639945e-09, 0.14999999, -0.004782267, 0.14992376, 1.360194e-09, -0.14992376, -0.004782267, -6.414071e-09, -2.6642303, 0.24045467, -1.2631235)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1719183833]
+transform = Transform3D(-0.7187807, -0.0003289801, 0.6952369, -0.00069175765, 0.9999998, -0.00024199253, -0.6952367, -0.00065487507, -0.71878076, -14.066, 1.128, -3.821)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2016582991]
+environment = SubResource("Environment_nsdvb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=387377279]
+transform = Transform3D(0.99254614, -0.02116239, 0.12001788, 0, 0.9848077, 0.17364818, -0.12186935, -0.17235383, 0.9774671, 0, 0, 0)
+light_color = Color(0.99215686, 0.36862746, 0.3254902, 1)
+light_energy = 3.267
+shadow_enabled = true
