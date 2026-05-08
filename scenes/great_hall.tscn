@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds7o8867kamlq" path="res://models/window.blend" id="4_xpdmu"]
 [ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="5_0o1in"]
 [ext_resource type="PackedScene" uid="uid://cf81ftjr0qa14" path="res://models/statue.blend" id="6_e27m1"]
+[ext_resource type="PackedScene" uid="uid://cvrjbvp5sb8x8" path="res://player/player.tscn" id="9_0o1in"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gshjv"]
 size = Vector3(55, 0, 15)
@@ -73,7 +74,7 @@ uv1_triplanar = true
 albedo_texture = ExtResource("3_e27m1")
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_xpdmu"]
-rayleigh_color = Color(1, 0.8117647, 0.6901961, 1)
+rayleigh_color = Color(0.7806141, 0.28607988, 0.1747044, 1)
 mie_color = Color(1, 0.5686275, 0.23137255, 1)
 turbidity = 3.0
 ground_color = Color(0.07058824, 0.08627451, 0.10980392, 1)
@@ -179,9 +180,6 @@ transform = Transform3D(1, 8.351872e-23, -3.212633e-30, 0, -4.371139e-08, -0.88,
 [node name="dragonstatue" parent="LeftWall/CSGBox3D/CSGCombiner3D" unique_id=1068132857 instance=ExtResource("6_e27m1")]
 transform = Transform3D(-6.367444e-09, -1.5639945e-09, 0.14999999, -0.004782267, 0.14992376, 1.360194e-09, -0.14992376, -0.004782267, -6.414071e-09, -2.6642303, 0.24045467, -1.2631235)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1719183833]
-transform = Transform3D(-0.7187807, -0.0003289801, 0.6952369, -0.00069175765, 0.9999998, -0.00024199253, -0.6952367, -0.00065487507, -0.71878076, -14.066, 1.128, -3.821)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2016582991]
 environment = SubResource("Environment_nsdvb")
 
@@ -190,3 +188,6 @@ transform = Transform3D(0.99254614, -0.02116239, 0.12001788, 0, 0.9848077, 0.173
 light_color = Color(0.99215686, 0.36862746, 0.3254902, 1)
 light_energy = 3.267
 shadow_enabled = true
+
+[node name="Player" parent="." unique_id=966249377 instance=ExtResource("9_0o1in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.426813, 2.2621531, -1.9689512)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cvrjbvp5sb8x8"]
+
+[ext_resource type="Script" uid="uid://dx7c1usuta1oy" path="res://player/player.gd" id="1_oul6g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rkbax"]
+height = 1.3709717
+
+[node name="Player" type="CharacterBody3D" unique_id=966249377 node_paths=PackedStringArray("camera")]
+script = ExtResource("1_oul6g")
+camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=568537851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69079685, 0)
+shape = SubResource("CapsuleShape3D_rkbax")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1309174135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93072796, 0)

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ds7o8867kamlq" path="res://models/window.blend" id="2_rdbce"]
 [ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="3_4pntd"]
 [ext_resource type="PackedScene" uid="uid://cf81ftjr0qa14" path="res://models/statue.blend" id="4_82o0p"]
+[ext_resource type="Shader" uid="uid://cew35mlmdq8se" path="res://shaders/fireshader.gdshader" id="5_acvn5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwbns"]
 albedo_texture = ExtResource("1_h4vag")
@@ -23,6 +24,29 @@ uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h48ho"]
 albedo_texture = ExtResource("1_h4vag")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_acvn5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_acvn5"]
+noise_type = 3
+frequency = 0.0097
+fractal_octaves = 4
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2ss3l"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_acvn5")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_22pqc"]
+render_priority = 0
+shader = ExtResource("5_acvn5")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_2ss3l")
+shader_parameter/fire_color = Color(1, 0.5, 0.1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tchgq"]
+material = SubResource("ShaderMaterial_22pqc")
+size = Vector2(0.3, 0.4)
 
 [node name="LeftWall2" type="StaticBody3D" unique_id=385770501]
 
@@ -65,3 +89,17 @@ transform = Transform3D(1, 8.351872e-23, -3.212633e-30, 0, -4.371139e-08, -0.88,
 
 [node name="dragonstatue" parent="CSGBox3D/CSGCombiner3D" unique_id=705227704 instance=ExtResource("4_82o0p")]
 transform = Transform3D(-6.367444e-09, -1.5639945e-09, 0.14999999, -0.004782267, 0.14992376, 1.360194e-09, -0.14992376, -0.004782267, -6.414071e-09, -2.6642303, 0.24045467, -1.2631235)
+
+[node name="Sprite3D" type="Sprite3D" parent="CSGBox3D/CSGCombiner3D" unique_id=557680180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6800518, 0.42181587, -1.702014)
+billboard = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGBox3D/CSGCombiner3D/Sprite3D" unique_id=1630084146]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.0058193207, 0.10619259, -0.059055805)
+material_overlay = SubResource("ShaderMaterial_acvn5")
+mesh = SubResource("PlaneMesh_tchgq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/CSGCombiner3D/Sprite3D/MeshInstance3D" unique_id=1275437651]
+light_color = Color(0.6704028, 0.2669695, 0.08639919, 1)
+light_energy = 0.366
+omni_range = 1.908
