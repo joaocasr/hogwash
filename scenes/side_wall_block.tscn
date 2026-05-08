@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://bxuy847gyw3j5"]
+
+[ext_resource type="Texture2D" uid="uid://sukreuwfar88" path="res://textures/stonewall.webp" id="1_h4vag"]
+[ext_resource type="PackedScene" uid="uid://ds7o8867kamlq" path="res://models/window.blend" id="2_rdbce"]
+[ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="3_4pntd"]
+[ext_resource type="PackedScene" uid="uid://cf81ftjr0qa14" path="res://models/statue.blend" id="4_82o0p"]
+[ext_resource type="Shader" uid="uid://cew35mlmdq8se" path="res://shaders/fireshader.gdshader" id="5_acvn5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwbns"]
+albedo_texture = ExtResource("1_h4vag")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0rn8"]
+albedo_texture = ExtResource("1_h4vag")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4485"]
+albedo_texture = ExtResource("1_h4vag")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tp47e"]
+albedo_texture = ExtResource("1_h4vag")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h48ho"]
+albedo_texture = ExtResource("1_h4vag")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_acvn5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_acvn5"]
+noise_type = 3
+frequency = 0.0097
+fractal_octaves = 4
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2ss3l"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_acvn5")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_22pqc"]
+render_priority = 0
+shader = ExtResource("5_acvn5")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_2ss3l")
+shader_parameter/fire_color = Color(1, 0.5, 0.1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tchgq"]
+material = SubResource("ShaderMaterial_22pqc")
+size = Vector2(0.3, 0.4)
+
+[node name="WallBlock" type="StaticBody3D" unique_id=385770501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.285, 0, 2.25)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1168077239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.07, 0)
+size = Vector3(5.4101257, 10.144653, 1.0898743)
+material = SubResource("StandardMaterial3D_gwbns")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="CSGBox3D" unique_id=1452781705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5621138, -1.5146356, 0)
+operation = 2
+
+[node name="window" parent="CSGBox3D/CSGCombiner3D" unique_id=1483889324 instance=ExtResource("2_rdbce")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.5442238, 1.7288394, 0.48308277)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGBox3D/CSGCombiner3D" unique_id=1991457269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5802498, 1.7401528, 0)
+radius = 1.0499701
+radial_segments = 6
+rings = 3
+material = SubResource("StandardMaterial3D_a0rn8")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CSGCombiner3D" unique_id=649314948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58358, 0.16206574, 0.11043644)
+size = Vector3(1.6296158, 4.1205926, 5.571127)
+material = SubResource("StandardMaterial3D_q4485")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D/CSGCombiner3D" unique_id=2022728848]
+transform = Transform3D(0.9999953, 0.0023531155, 0.0019744984, 0, 0.6427876, -0.7660444, -0.0030717745, 0.76604074, 0.64278454, -0.5805092, -1.8672125, -0.32194567)
+size = Vector3(1.6151266, 4.7596436, 1.0805664)
+material = SubResource("StandardMaterial3D_tp47e")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D/CSGCombiner3D" unique_id=1199232365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58719254, -3.0325408, -0.66478395)
+size = Vector3(1.6320801, 1.234375, 1.0761719)
+material = SubResource("StandardMaterial3D_h48ho")
+
+[node name="woodwall" parent="CSGBox3D/CSGCombiner3D" unique_id=1360712274 instance=ExtResource("3_4pntd")]
+transform = Transform3D(1.02, 8.351872e-23, -3.212633e-30, 0, -4.371139e-08, -0.88, -8.518909e-23, 1, -3.8466023e-08, -2.83, -2.217, -0.588)
+
+[node name="dragonstatue" parent="CSGBox3D/CSGCombiner3D" unique_id=417173935 instance=ExtResource("4_82o0p")]
+transform = Transform3D(-6.556709e-09, 0, 0.14999999, 0, 0.15000002, 0, -0.15000002, 0, -6.556708e-09, -2.6642303, 0.24045467, -1.1673613)
+
+[node name="Sprite3D" type="Sprite3D" parent="CSGBox3D/CSGCombiner3D" unique_id=557680180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6800518, 0.42181587, -1.702014)
+billboard = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGBox3D/CSGCombiner3D/Sprite3D" unique_id=1630084146]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.0058193207, 0.10619259, -0.059055805)
+material_overlay = SubResource("ShaderMaterial_acvn5")
+mesh = SubResource("PlaneMesh_tchgq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/CSGCombiner3D/Sprite3D/MeshInstance3D" unique_id=1275437651]
+light_color = Color(0.6704028, 0.2669695, 0.08639919, 1)
+light_energy = 0.366
+omni_range = 3.0
