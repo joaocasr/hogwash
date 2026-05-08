@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cmops55kyjqjs"]
+
+[ext_resource type="PackedScene" uid="uid://dxpyr5oh10t0w" path="res://models/floor.glb" id="1_1det0"]
+
+[node name="FloorBlock_GreatHall" type="Node3D" unique_id=1375558799]
+
+[node name="floor" parent="." unique_id=1076336780 instance=ExtResource("1_1det0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
