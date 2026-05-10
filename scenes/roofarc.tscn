@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ps2bwbk5k2op"]
+
+[ext_resource type="PackedScene" uid="uid://ddo80x8ilbxbh" path="res://models/rooftop-verts.blend" id="1_f0o6m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f0o6m"]
+size = Vector3(1, 13.180603, 16.908325)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=301747749]
+
+[node name="rooftop-verts" parent="." unique_id=557635005 instance=ExtResource("1_f0o6m")]
+transform = Transform3D(-4.152582e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -0.95, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=187973240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3804626, 0.02520752)
+shape = SubResource("BoxShape3D_f0o6m")

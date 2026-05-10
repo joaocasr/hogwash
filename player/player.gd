@@ -39,9 +39,9 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		if Input.is_key_pressed(KEY_A):
-			rotationX -= camera_sensitivity
 		if Input.is_key_pressed(KEY_D):
+			rotationX -= camera_sensitivity
+		if Input.is_key_pressed(KEY_A):
 			rotationX += camera_sensitivity
 		if Input.is_key_pressed(KEY_W):
 			rotationY += camera_sensitivity

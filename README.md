@@ -2,7 +2,7 @@ I'm Bob, The Constructor. I'm in charge of building a so called Hogwash castle o
 
 This is the Great Hall, where all the students should be eating. We need to build it, but we don't have the money. Can you help us?
 
-<img src="mostrar_ao_empreiteiro/greathall4.JPG" alt="Great Hall" width="500px"/>
+<img src="mostrar_ao_empreiteiro/greathall5.JPG" alt="Great Hall" width="500px"/>
 
 
 This is how I left the Great Hall. It is a mess, isn't it? We need to clean it up and make it look like a real castle.

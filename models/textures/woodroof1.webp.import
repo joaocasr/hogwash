@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjpkpunrneouc"
-path.s3tc="res://.godot/imported/wood.webp-800b0d2ea4dddc8f821f99450e0e598b.s3tc.ctex"
+uid="uid://tv7s25wc8m5y"
+path.s3tc="res://.godot/imported/woodroof1.webp-1232e80459155e6e5b25ab1c629224b7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://models/textures/wood.webp"
-dest_files=["res://.godot/imported/wood.webp-800b0d2ea4dddc8f821f99450e0e598b.s3tc.ctex"]
+source_file="res://models/textures/woodroof1.webp"
+dest_files=["res://.godot/imported/woodroof1.webp-1232e80459155e6e5b25ab1c629224b7.s3tc.ctex"]
 
 [params]
 
