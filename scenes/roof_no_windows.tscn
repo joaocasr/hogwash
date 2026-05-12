@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://yrv4ot6bewxr"]
+
+[ext_resource type="PackedScene" uid="uid://dt3w8klhymlr1" path="res://models/roof-tiles.blend" id="1_0xjdd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xjdd"]
+size = Vector3(23.85559, 23.711304, 13.388184)
+
+[node name="RoofNoWindows" type="StaticBody3D" unique_id=886790043]
+transform = Transform3D(-1.9337792e-08, -2.1007565e-09, -0.445, -0.04805971, 0.44239712, 0, 0.44239712, 0.04805971, -1.9451567e-08, 0, 0, 0)
+
+[node name="roof-tiles" parent="." unique_id=173806040 instance=ExtResource("1_0xjdd")]
+transform = Transform3D(1, 0, 0, 0, 1, -4.440892e-16, 0, 4.440892e-16, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1568098394]
+transform = Transform3D(1, 0, 0, 0, 1, -2.220446e-15, 0, 2.2204467e-15, 0.9999997, 0.3402709, 1.0422981, -0.32251024)
+shape = SubResource("BoxShape3D_0xjdd")

@@ -5,6 +5,8 @@
 [ext_resource type="MeshLibrary" uid="uid://0m8qxxqbl6j6" path="res://meshLibrary/ghfloorblock.tres" id="3_0o1in"]
 [ext_resource type="PackedScene" uid="uid://bxuy847gyw3j5" path="res://scenes/side_wall_block.tscn" id="4_0o1in"]
 [ext_resource type="PackedScene" uid="uid://ps2bwbk5k2op" path="res://scenes/roofarc.tscn" id="6_jtf6l"]
+[ext_resource type="PackedScene" uid="uid://kibikpnjbx3k" path="res://scenes/roof_windows.tscn" id="8_0o1in"]
+[ext_resource type="PackedScene" uid="uid://yrv4ot6bewxr" path="res://scenes/roof_no_windows.tscn" id="8_xpdmu"]
 [ext_resource type="PackedScene" uid="uid://cvrjbvp5sb8x8" path="res://player/player.tscn" id="9_0o1in"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6dhdb"]
@@ -16,7 +18,7 @@ uv1_scale = Vector3(2, 1, 1)
 uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wxa6g"]
-size = Vector3(2.3399658, 1, 16.113403)
+size = Vector3(2.3399658, 0.7225342, 16.113403)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mf4dt"]
 size = Vector3(5.92, 0.795, 15.865)
@@ -27,7 +29,7 @@ uv1_scale = Vector3(2, 1, 1)
 uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jtf6l"]
-size = Vector3(6.228882, 1, 15.950439)
+size = Vector3(7.4785767, 0.9590454, 15.950439)
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_xpdmu"]
 rayleigh_color = Color(0.7806141, 0.28607988, 0.1747044, 1)
@@ -46,6 +48,8 @@ sky = SubResource("Sky_0o1in")
 script = ExtResource("1_e27m1")
 wall_block = ExtResource("4_0o1in")
 roof_arc = ExtResource("6_jtf6l")
+roof_windows = ExtResource("8_0o1in")
+roof_tilesonly = ExtResource("8_xpdmu")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1909449205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.475098, -1, -22.259668)
@@ -63,7 +67,7 @@ mesh = SubResource("BoxMesh_6dhdb")
 surface_material_override/0 = SubResource("StandardMaterial3D_t3qv5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stairs" unique_id=1904089836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6699829, 0, 0.071838856)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6699829, -0.13873291, 0.07183838)
 shape = SubResource("BoxShape3D_wxa6g")
 
 [node name="TeachersArea" type="StaticBody3D" parent="." unique_id=488117376]
@@ -75,7 +79,7 @@ mesh = SubResource("BoxMesh_mf4dt")
 surface_material_override/0 = SubResource("StandardMaterial3D_wtcu0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TeachersArea" unique_id=416300428]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.531446, 0, -14.569756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.156294, 0.096710175, -14.569756)
 shape = SubResource("BoxShape3D_jtf6l")
 
 [node name="WallBlock" parent="." unique_id=385770501 instance=ExtResource("4_0o1in")]
@@ -91,7 +95,13 @@ light_energy = 3.267
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=966249377 instance=ExtResource("9_0o1in")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.15719, 2.2621531, -23.316895)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.199257, 26.654236, -19.255426)
 
 [node name="RoofArc" parent="." unique_id=301747749 instance=ExtResource("6_jtf6l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9, 23.083, 16.229, -22.348)
+
+[node name="RoofWindows" parent="." unique_id=938560008 instance=ExtResource("8_0o1in")]
+transform = Transform3D(-1.9337792e-08, -2.1007565e-09, -0.445, -0.04805971, 0.44239712, 0, 0.44239712, 0.04805971, -1.9451567e-08, 25.005, 15.902, -17.853)
+
+[node name="RoofNoWindows" parent="." unique_id=886790043 instance=ExtResource("8_xpdmu")]
+transform = Transform3D(-1.9337792e-08, -2.1007562e-09, -0.445, -0.048059706, 0.4423971, 2.496463e-16, 0.4423971, 0.048059706, -1.9451567e-08, 30.010202, 15.902, -17.98)
