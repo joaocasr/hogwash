@@ -42,7 +42,7 @@ func _ready():
 
 		#front tilestroof
 		var tilestroof_instance = roof_tilesonly.instantiate()
-		tilestroof_instance.position = Vector3(22.698 + (i * offset), 15.902,-17.98)
+		tilestroof_instance.position = Vector3(22.698 + (i * offset), 15.682,-18.13)
 		tilestroof_instance.scale = Vector3(0.445, 0.445, 0.445)
 		tilestroof_instance.rotation_degrees.y = -90
 		tilestroof_instance.rotation_degrees.z = -6.2
@@ -50,7 +50,7 @@ func _ready():
 
 		#back tilestroof
 		var backtilestroof_instance = roof_windows.instantiate()
-		backtilestroof_instance.position = Vector3(22.698 + (i * offset), 15.902,-26.5)
+		backtilestroof_instance.position = Vector3(22.698 + (i * offset), 15.682,-26.65)
 		backtilestroof_instance.scale = Vector3(0.445, 0.445, -0.445)
 		backtilestroof_instance.rotation_degrees.y = 90
 		backtilestroof_instance.rotation_degrees.z = -6.2
@@ -59,7 +59,7 @@ func _ready():
 		var instance_b = null;
 		if(i==4):
 			instance_b = fireplace.instantiate()
-			instance_b.position = Vector3(16.289 + (i * offset), 0, -29.511)
+			instance_b.position = Vector3(16.289 + (i * offset), 0, -29.7)
 		elif(i==5):
 			continue
 		else:
