@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c8ve1xy6yqe7m"]
+
+[ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="1_pkyh6"]
+[ext_resource type="Texture2D" uid="uid://sukreuwfar88" path="res://textures/stonewall.webp" id="2_xs0h0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vom8x"]
+albedo_texture = ExtResource("2_xs0h0")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqns7"]
+size = Vector3(16.559479, 21.325806, 1)
+
+[node name="doorwall_greathall" type="Node3D" unique_id=1957202337]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=819778475]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D" unique_id=1250074113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1654577, 10.344301, 0)
+size = Vector3(16.005068, 20.693256, 1.0898743)
+material = SubResource("StandardMaterial3D_vom8x")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="StaticBody3D/CSGBox3D" unique_id=1675115661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5621138, -1.5146356, 0)
+operation = 2
+
+[node name="woodwall" parent="StaticBody3D/CSGBox3D/CSGCombiner3D" unique_id=1360712274 instance=ExtResource("1_pkyh6")]
+transform = Transform3D(1.182, 9.6714675e-23, -3.7237333e-30, 0, -5.061779e-08, -1.02, -9.8719127e-23, 1.158, -4.4585615e-08, -4.696015, -7.5207543, -0.588)
+
+[node name="woodwall2" parent="StaticBody3D/CSGBox3D/CSGCombiner3D" unique_id=171744630 instance=ExtResource("1_pkyh6")]
+transform = Transform3D(1.182, 9.6714675e-23, -3.7237333e-30, 0, -5.061779e-08, -1.02, -9.8719127e-23, 1.158, -4.4585615e-08, -1.5265231, -7.5207543, -0.588)
+
+[node name="woodwall3" parent="StaticBody3D/CSGBox3D/CSGCombiner3D" unique_id=746922801 instance=ExtResource("1_pkyh6")]
+transform = Transform3D(1.182, 9.6714675e-23, -3.7237333e-30, 0, -5.061779e-08, -1.02, -9.8719127e-23, 1.158, -4.4585615e-08, 1.6673937, -7.5207543, -0.588)
+
+[node name="woodwall4" parent="StaticBody3D/CSGBox3D/CSGCombiner3D" unique_id=191191906 instance=ExtResource("1_pkyh6")]
+transform = Transform3D(1.182, 9.6714675e-23, -3.7237333e-30, 0, -5.061779e-08, -1.02, -9.8719127e-23, 1.158, -4.4585615e-08, -7.8752027, -7.5207543, -0.588)
+
+[node name="woodwall5" parent="StaticBody3D/CSGBox3D/CSGCombiner3D" unique_id=1651084499 instance=ExtResource("1_pkyh6")]
+transform = Transform3D(1.182, 9.6714675e-23, -3.7237333e-30, 0, -5.061779e-08, -1.02, -9.8719127e-23, 1.158, -4.4585615e-08, 4.7793655, -7.5207543, -0.588)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=257429446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2939606, 10.162903, 0)
+shape = SubResource("BoxShape3D_nqns7")

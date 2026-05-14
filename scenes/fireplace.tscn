@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://mn0cn7b5364q"]
+
+[ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="1_4xjeg"]
+[ext_resource type="Texture2D" uid="uid://sukreuwfar88" path="res://textures/stonewall.webp" id="2_tqqnm"]
+[ext_resource type="PackedScene" uid="uid://btw3qneu5rjjb" path="res://models/fireplace-aux.blend" id="3_ng1xj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2g5uf"]
+albedo_texture = ExtResource("2_tqqnm")
+uv1_triplanar = true
+
+[node name="Node3D" type="Node3D" unique_id=2071597430]
+
+[node name="woodwall" parent="." unique_id=1360712274 instance=ExtResource("1_4xjeg")]
+transform = Transform3D(1.541, 1.2619678e-22, -4.8554563e-30, 0, -6.604791e-08, -1.33, -1.2870234e-22, 1.511, -5.813615e-08, -0.26294255, 1.9913769, -0.6151231)
+
+[node name="woodwall2" parent="." unique_id=948339682 instance=ExtResource("1_4xjeg")]
+transform = Transform3D(1.541, 1.2619678e-22, -4.8554563e-30, 0, -6.604791e-08, -1.33, -1.2870234e-22, 1.511, -5.813615e-08, 5.155607, 1.9948153, -0.6283702)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=73901533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.445219, 5.7405477, 0.0075416565)
+size = Vector3(9.803841, 11.485748, 1.0898743)
+material = SubResource("StandardMaterial3D_2g5uf")
+
+[node name="fireplace-aux" parent="." unique_id=975923169 instance=ExtResource("3_ng1xj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89640784, 0, -0.9741452)

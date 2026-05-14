@@ -27,7 +27,7 @@ albedo_texture = ExtResource("1_h4vag")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_acvn5"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_acvn5"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_qnevr"]
 noise_type = 3
 frequency = 0.0097
 fractal_octaves = 4
@@ -35,17 +35,17 @@ fractal_octaves = 4
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2ss3l"]
 width = 256
 height = 256
-noise = SubResource("FastNoiseLite_acvn5")
+noise = SubResource("FastNoiseLite_qnevr")
 seamless = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_22pqc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k01j6"]
 render_priority = 0
 shader = ExtResource("5_acvn5")
 shader_parameter/noise_tex = SubResource("NoiseTexture2D_2ss3l")
 shader_parameter/fire_color = Color(1, 0.5, 0.1, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tchgq"]
-material = SubResource("ShaderMaterial_22pqc")
+material = SubResource("ShaderMaterial_k01j6")
 size = Vector2(0.3, 0.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qnevr"]
@@ -98,7 +98,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6800518, 0.42181587, -1.70
 billboard = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CSGBox3D/CSGCombiner3D/Sprite3D" unique_id=1630084146]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.0058193207, 0.10619259, -0.059055805)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.006, -0.541, -0.009)
 material_overlay = SubResource("ShaderMaterial_acvn5")
 mesh = SubResource("PlaneMesh_tchgq")
 
