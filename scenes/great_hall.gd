@@ -6,7 +6,7 @@ extends Node3D
 @export var roof_tilesonly: PackedScene
 @export var fireplace: PackedScene
 @export var count: int = 9
-@export var offset: float = 4.5
+@export var offset: float = 5.33
 @export var arc_initpos: float = 4.5
 func _ready():
 	if wall_block == null or roof_arc == null:

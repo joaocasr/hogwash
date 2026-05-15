@@ -1,32 +1,29 @@
 [gd_scene format=3 uid="uid://mn0cn7b5364q"]
 
 [ext_resource type="PackedScene" uid="uid://c4q1mky5qerhq" path="res://models/woodwall.blend" id="1_4xjeg"]
-[ext_resource type="Texture2D" uid="uid://sukreuwfar88" path="res://textures/stonewall.webp" id="2_tqqnm"]
 [ext_resource type="PackedScene" uid="uid://btw3qneu5rjjb" path="res://models/fireplace-aux.blend" id="3_ng1xj"]
+[ext_resource type="PackedScene" uid="uid://b8n6xtpg3qhq1" path="res://models/genericwall.blend" id="4_ng1xj"]
 [ext_resource type="PackedScene" uid="uid://dvissehua0tv3" path="res://models/pillar.blend" id="4_tqqnm"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2g5uf"]
-albedo_texture = ExtResource("2_tqqnm")
-uv1_triplanar = true
 
 [node name="Node3D" type="Node3D" unique_id=2071597430]
 
 [node name="woodwall" parent="." unique_id=1360712274 instance=ExtResource("1_4xjeg")]
-transform = Transform3D(1.541, 1.2619678e-22, -4.8554563e-30, 0, -6.604791e-08, -1.33, -1.2870234e-22, 1.511, -5.813615e-08, -0.26294255, 1.9913769, -0.6151231)
+transform = Transform3D(1.541, 1.6795614e-22, -3.4499296e-30, 0, -8.79036e-08, -0.945, -1.2870234e-22, 2.011, -4.1307263e-08, -0.263, 1.2332127, -0.615)
 
 [node name="woodwall2" parent="." unique_id=948339682 instance=ExtResource("1_4xjeg")]
-transform = Transform3D(1.541, 1.2619678e-22, -4.8554563e-30, 0, -6.604791e-08, -1.33, -1.2870234e-22, 1.511, -5.813615e-08, 5.155607, 1.9948153, -0.6283702)
+transform = Transform3D(1.541, 1.2619678e-22, -3.5411976e-30, 0, -6.604791e-08, -0.97, -1.2870234e-22, 1.511, -4.2400046e-08, 6.606388, 1.1785655, -0.6283702)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=73901533]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.445219, 5.7405477, 0.0075416565)
-size = Vector3(9.803841, 11.485748, 1.0898743)
-material = SubResource("StandardMaterial3D_2g5uf")
-
-[node name="fireplace-aux" parent="." unique_id=975923169 instance=ExtResource("3_ng1xj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5558465, 0, -0.9741452)
+[node name="fireplace-aux" parent="." unique_id=1143368265 instance=ExtResource("3_ng1xj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1208446, -0.12163341, -0.9741452)
 
 [node name="pillar" parent="." unique_id=427587141 instance=ExtResource("4_tqqnm")]
-transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, 3.9199395, 4.538449, -1.1711649)
+transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, 5.6725297, 4.538449, -1.1711649)
 
 [node name="pillar2" parent="." unique_id=1848513995 instance=ExtResource("4_tqqnm")]
-transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, -0.49823713, 4.744391, -1.1711649)
+transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, -0.0248065, 4.744391, -1.1711649)
+
+[node name="genericwall" parent="." unique_id=565598729 instance=ExtResource("4_ng1xj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.22366142, -4.7683716e-07, -0.029267788)
+
+[node name="genericwall2" parent="." unique_id=1825981929 instance=ExtResource("4_ng1xj")]
+transform = Transform3D(-4.371139e-08, 0, 1.2, 0, 1, 0, -1, 0, -5.2453668e-08, 5.54438, -4.7683716e-07, -0.029267788)
