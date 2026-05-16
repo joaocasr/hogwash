@@ -59,7 +59,7 @@ func _ready():
 		var instance_b = null;
 		if(i==4):
 			instance_b = fireplace.instantiate()
-			instance_b.position = Vector3(16.289 + (i * offset), 0, -29.7)
+			instance_b.position = Vector3(16.289 + (i * offset), 0, -29.9)
 		elif(i==5):
 			continue
 		else:

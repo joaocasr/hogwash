@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://yrv4ot6bewxr" path="res://scenes/roof_no_windows.tscn" id="8_xpdmu"]
 [ext_resource type="PackedScene" uid="uid://cvrjbvp5sb8x8" path="res://player/player.tscn" id="9_0o1in"]
 [ext_resource type="PackedScene" uid="uid://c8ve1xy6yqe7m" path="res://scenes/doorwall_greathall.tscn" id="9_nsdvb"]
+[ext_resource type="PackedScene" uid="uid://cw1vffvlmrait" path="res://models/backwall-greathall.blend" id="11_o64ix"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6dhdb"]
 size = Vector3(2.345, 0.54, 15.865)
@@ -31,7 +32,7 @@ uv1_scale = Vector3(2, 1, 1)
 uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jtf6l"]
-size = Vector3(7.4785767, 0.9590454, 15.950439)
+size = Vector3(7.4785767, 0.8545227, 15.950439)
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_xpdmu"]
 rayleigh_color = Color(0.7806141, 0.28607988, 0.1747044, 1)
@@ -82,7 +83,7 @@ mesh = SubResource("BoxMesh_mf4dt")
 surface_material_override/0 = SubResource("StandardMaterial3D_wtcu0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TeachersArea" unique_id=416300428]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.156294, 0.096710175, -14.569756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.156294, 0.044448823, -14.569756)
 shape = SubResource("BoxShape3D_jtf6l")
 
 [node name="WallBlock" parent="." unique_id=385770501 instance=ExtResource("4_0o1in")]
@@ -111,3 +112,6 @@ transform = Transform3D(-1.9337792e-08, -2.1007562e-09, -0.445, -0.048059706, 0.
 
 [node name="doorwall_greathall" parent="." unique_id=1957202337 instance=ExtResource("9_nsdvb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.94732, -0.044761658, -16.087017)
+
+[node name="backwall-greathall" parent="." unique_id=2141168449 instance=ExtResource("11_o64ix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.645, 13.731466, 0.8241118, -17.185936)

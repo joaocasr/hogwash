@@ -8,22 +8,22 @@
 [node name="Node3D" type="Node3D" unique_id=2071597430]
 
 [node name="woodwall" parent="." unique_id=1360712274 instance=ExtResource("1_4xjeg")]
-transform = Transform3D(1.541, 1.6795614e-22, -3.4499296e-30, 0, -8.79036e-08, -0.945, -1.2870234e-22, 2.011, -4.1307263e-08, -0.263, 1.2332127, -0.615)
+transform = Transform3D(1.8, 1.6795614e-22, -3.4499296e-30, 0, -8.79036e-08, -0.945, -1.5033369e-22, 2.011, -4.1307263e-08, -0.06689501, 1.2332127, -0.615)
 
 [node name="woodwall2" parent="." unique_id=948339682 instance=ExtResource("1_4xjeg")]
-transform = Transform3D(1.541, 1.2619678e-22, -3.5411976e-30, 0, -6.604791e-08, -0.97, -1.2870234e-22, 1.511, -4.2400046e-08, 6.606388, 1.1785655, -0.6283702)
+transform = Transform3D(1.94, 1.2619678e-22, -3.5411976e-30, 0, -6.604791e-08, -0.97, -1.6202631e-22, 1.511, -4.2400046e-08, 6.0110865, 1.1785655, -0.6283702)
 
-[node name="fireplace-aux" parent="." unique_id=1143368265 instance=ExtResource("3_ng1xj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1208446, -0.12163341, -0.9741452)
+[node name="fireplace-aux" parent="." unique_id=827442934 instance=ExtResource("3_ng1xj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3971624, -0.12163341, -0.9741452)
 
 [node name="pillar" parent="." unique_id=427587141 instance=ExtResource("4_tqqnm")]
-transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, 5.6725297, 4.538449, -1.1711649)
+transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, 4.7240605, 4.538449, -1.1711649)
 
 [node name="pillar2" parent="." unique_id=1848513995 instance=ExtResource("4_tqqnm")]
-transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, -0.0248065, 4.744391, -1.1711649)
+transform = Transform3D(-5.2453664e-09, 0, 0.12, 0, 0.12, 0, -0.12, 0, -5.2453664e-09, -0.5135565, 4.744391, -1.1711649)
 
-[node name="genericwall" parent="." unique_id=565598729 instance=ExtResource("4_ng1xj")]
+[node name="genericwall" parent="." unique_id=619673275 instance=ExtResource("4_ng1xj")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.22366142, -4.7683716e-07, -0.029267788)
 
-[node name="genericwall2" parent="." unique_id=1825981929 instance=ExtResource("4_ng1xj")]
+[node name="genericwall2" parent="." unique_id=598216500 instance=ExtResource("4_ng1xj")]
 transform = Transform3D(-4.371139e-08, 0, 1.2, 0, 1, 0, -1, 0, -5.2453668e-08, 5.54438, -4.7683716e-07, -0.029267788)
