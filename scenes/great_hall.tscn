@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://sb6y66e3kl02"]
 
 [ext_resource type="Script" uid="uid://cv8yk0bekrsc0" path="res://scenes/great_hall.gd" id="1_e27m1"]
-[ext_resource type="Texture2D" uid="uid://ccs76ov654x1k" path="res://textures/woodstairs.jpg" id="2_jtf6l"]
 [ext_resource type="MeshLibrary" uid="uid://0m8qxxqbl6j6" path="res://meshLibrary/ghfloorblock.tres" id="3_0o1in"]
 [ext_resource type="PackedScene" uid="uid://bxuy847gyw3j5" path="res://scenes/side_wall_block.tscn" id="4_0o1in"]
 [ext_resource type="PackedScene" uid="uid://ps2bwbk5k2op" path="res://scenes/roofarc.tscn" id="6_jtf6l"]
@@ -10,29 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://yrv4ot6bewxr" path="res://scenes/roof_no_windows.tscn" id="8_xpdmu"]
 [ext_resource type="PackedScene" uid="uid://cvrjbvp5sb8x8" path="res://player/player.tscn" id="9_0o1in"]
 [ext_resource type="PackedScene" uid="uid://c8ve1xy6yqe7m" path="res://scenes/doorwall_greathall.tscn" id="9_nsdvb"]
+[ext_resource type="PackedScene" uid="uid://cfdgixfytrhjq" path="res://models/stairs-gh.blend" id="11_em4ts"]
 [ext_resource type="PackedScene" uid="uid://cw1vffvlmrait" path="res://models/backwall-greathall.blend" id="11_o64ix"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_6dhdb"]
-size = Vector3(2.345, 0.54, 15.865)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3qv5"]
-albedo_texture = ExtResource("2_jtf6l")
-uv1_scale = Vector3(2, 1, 1)
-uv1_triplanar = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_wxa6g"]
-size = Vector3(2.3399658, 0.7225342, 16.113403)
-
-[sub_resource type="BoxMesh" id="BoxMesh_mf4dt"]
-size = Vector3(5.92, 0.795, 15.865)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtcu0"]
-albedo_texture = ExtResource("2_jtf6l")
-uv1_scale = Vector3(2, 1, 1)
-uv1_triplanar = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jtf6l"]
-size = Vector3(7.4785767, 0.8545227, 15.950439)
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_xpdmu"]
 rayleigh_color = Color(0.7806141, 0.28607988, 0.1747044, 1)
@@ -61,30 +39,6 @@ mesh_library = ExtResource("3_0o1in")
 data = {
 "cells": PackedInt32Array(65522, 65532, 0, 65522, 65533, 0, 65522, 65534, 0, 65522, 65535, 0, 65522, 0, 0, 65522, 1, 0, 65522, 2, 0, 65522, 3, 0, 65523, 65532, 0, 65523, 65533, 0, 65523, 65534, 0, 65523, 65535, 0, 65523, 0, 0, 65523, 1, 0, 65523, 2, 0, 65523, 3, 0, 65524, 65532, 0, 65524, 65533, 0, 65524, 65534, 0, 65524, 65535, 0, 65524, 0, 0, 65524, 1, 0, 65524, 2, 0, 65524, 3, 0, 65525, 65532, 0, 65525, 65533, 0, 65525, 65534, 0, 65525, 65535, 0, 65525, 0, 0, 65525, 1, 0, 65525, 2, 0, 65525, 3, 0, 65526, 65532, 0, 65526, 65533, 0, 65526, 65534, 0, 65526, 65535, 0, 65526, 0, 0, 65526, 1, 0, 65526, 2, 0, 65526, 3, 0, 65527, 65532, 0, 65527, 65533, 0, 65527, 65534, 0, 65527, 65535, 0, 65527, 0, 0, 65527, 1, 0, 65527, 2, 0, 65527, 3, 0, 65528, 65532, 0, 65528, 65533, 0, 65528, 65534, 0, 65528, 65535, 0, 65528, 0, 0, 65528, 1, 0, 65528, 2, 0, 65528, 3, 0, 65529, 65532, 0, 65529, 65533, 0, 65529, 65534, 0, 65529, 65535, 0, 65529, 0, 0, 65529, 1, 0, 65529, 2, 0, 65529, 3, 0, 65530, 65532, 0, 65530, 65533, 0, 65530, 65534, 0, 65530, 65535, 0, 65530, 0, 0, 65530, 1, 0, 65530, 2, 0, 65530, 3, 0, 65531, 65532, 0, 65531, 65533, 0, 65531, 65534, 0, 65531, 65535, 0, 65531, 0, 0, 65531, 1, 0, 65531, 2, 0, 65531, 3, 0, 65532, 65532, 0, 65532, 65533, 0, 65532, 65534, 0, 65532, 65535, 0, 65532, 0, 0, 65532, 1, 0, 65532, 2, 0, 65532, 3, 0, 65533, 65532, 0, 65533, 65533, 0, 65533, 65534, 0, 65533, 65535, 0, 65533, 0, 0, 65533, 1, 0, 65533, 2, 0, 65533, 3, 0, 65534, 65532, 0, 65534, 65533, 0, 65534, 65534, 0, 65534, 65535, 0, 65534, 0, 0, 65534, 1, 0, 65534, 2, 0, 65534, 3, 0, 65535, 65532, 0, 65535, 65533, 0, 65535, 65534, 0, 65535, 65535, 0, 65535, 0, 0, 65535, 1, 0, 65535, 2, 0, 65535, 3, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 1, 65532, 0, 1, 65533, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 1, 2, 0, 1, 3, 0, 2, 65532, 0, 2, 65533, 0, 2, 65534, 0, 2, 65535, 0, 2, 0, 0, 2, 1, 0, 2, 2, 0, 2, 3, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 3, 1, 0, 3, 2, 0, 3, 3, 0, 4, 65532, 0, 4, 65535, 0, 4, 1, 0, 4, 2, 0, 4, 3, 0, 65520, 65532, 0, 65520, 65533, 0, 65520, 65534, 0, 65520, 65535, 0, 65520, 0, 0, 65520, 1, 0, 65520, 2, 0, 65520, 3, 0, 65521, 65532, 0, 65521, 65533, 0, 65521, 65534, 0, 65521, 65535, 0, 65521, 0, 0, 65521, 1, 0, 65521, 2, 0, 65521, 3, 0, 4, 65533, 0, 4, 65534, 0, 4, 0, 0)
 }
-
-[node name="Stairs" type="StaticBody3D" parent="." unique_id=1898481577]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.68448, 0.316, -22.310389)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Stairs" unique_id=1248074676]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59713554, -0.07630539, -0.016709149)
-mesh = SubResource("BoxMesh_6dhdb")
-surface_material_override/0 = SubResource("StandardMaterial3D_t3qv5")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Stairs" unique_id=1904089836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6699829, -0.13873291, 0.07183838)
-shape = SubResource("BoxShape3D_wxa6g")
-
-[node name="TeachersArea" type="StaticBody3D" parent="." unique_id=488117376]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.756, 0.316, -7.626)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="TeachersArea" unique_id=1756021524]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.859383, 0.056920797, -14.5943775)
-mesh = SubResource("BoxMesh_mf4dt")
-surface_material_override/0 = SubResource("StandardMaterial3D_wtcu0")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TeachersArea" unique_id=416300428]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.156294, 0.044448823, -14.569756)
-shape = SubResource("BoxShape3D_jtf6l")
 
 [node name="WallBlock" parent="." unique_id=385770501 instance=ExtResource("4_0o1in")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.889494, 0, -14.810733)
@@ -115,3 +69,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.9
 
 [node name="backwall-greathall" parent="." unique_id=2141168449 instance=ExtResource("11_o64ix")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.645, 13.731466, 0.8241118, -17.185936)
+
+[node name="stairs-gh" parent="." unique_id=212146836 instance=ExtResource("11_em4ts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.898119, 0.12999901, -22.635286)
